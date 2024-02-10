@@ -1,5 +1,8 @@
 package me.drayff.ettatests;
 
+import me.drayff.ettatests.commands.DoCommand;
+import me.drayff.ettatests.commands.MeCommand;
+import me.drayff.ettatests.commands.TryCommand;
 import me.drayff.ettatests.listeners.ChatListener;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -11,9 +14,13 @@ public final class EttaTests extends JavaPlugin {
     public void onEnable() {
         saveDefaultConfig();
 
-        getLogger().log(Level.INFO, "Plugin launched successfully!");
-
         getServer().getPluginManager().registerEvents(new ChatListener(this), this);
+
+        getCommand("me").setExecutor(new MeCommand(this));
+        getCommand("do").setExecutor(new DoCommand(this));
+        getCommand("try").setExecutor(new TryCommand(this));
+
+        getLogger().log(Level.INFO, "Plugin launched successfully!");
     }
 
     @Override

@@ -5,3 +5,18 @@ chat:
     prefix: "L"
   global:
     prefix: "G"
+
+commands:
+  me:
+    format: "[{chatPrefix}] {nickname} {message}"
+    distance: 20
+  do:
+    format: "[{chatPrefix}] {message}"
+    distance: 20
+  try:
+    format: "[{chatPrefix}] {nickname} {message} - {result}."
+    distance: 20
+    results:
+      true: "Удачно"
+      false: "Не удачно"
+  prefix: "E"

@@ -2,3 +2,14 @@ name: EttaTests
 version: '${project.version}'
 main: me.drayff.ettatests.EttaTests
 api-version: '1.20'
+
+commands:
+  me:
+    description: "piska piska"
+    usage: /me
+  do:
+    description: "piska piska"
+    usage: /do
+  try:
+    description: "piska piska"
+    usage: /try
