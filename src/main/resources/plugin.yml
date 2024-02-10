@@ -1,0 +1,4 @@
+name: EttaTests
+version: '${project.version}'
+main: me.drayff.ettatests.EttaTests
+api-version: '1.20'

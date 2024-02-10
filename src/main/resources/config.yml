@@ -1,0 +1,7 @@
+chat:
+  format: "[{chatPrefix}] {nickname}: {message}"
+  local:
+    distance: 100
+    prefix: "L"
+  global:
+    prefix: "G"
